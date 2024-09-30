@@ -1,37 +1,69 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+.body{
+    background-color: #7C93C3;
+    height: 100vh;
 
+
+}
 .fontStyle{
     font-family: 'Poppins',sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight:600;
+    letter-spacing: 0.1rem;
+    color:#fff;
 }
 .bg-green {
-    /* background-color:rgb(56, 170, 199); */
-    background-color: black;
+    background-color: #1E2A5E;
     height: 80px !important;
 }
 .cont-1{
-    /* background-color:rgb(151, 102, 230); */
-    background-color: rgb(255, 170, 41);
+    background-color: #7C93C3;
 }
 .custom{
-    background-color: rgb(255, 180, 82);
+    background-color: #55679C;
 }
 .form-control{
-    background-color: rgb(255, 206, 142);
+    background-color: #55679C;
 }
 .color{
-    background-color: rgb(255, 156, 64);
+    background-color: #88a3db;
+    height:3rem;
+    width:5em;
     border: none;
 }
 .color:hover{
-    background-color: rgb(255, 206, 142);
-
+    background-color:#1E2A5E;
 }
 .card{
-    background-color: rgb(255, 180, 82);
+    /* background-color: rgb(255, 180, 82); */
 
+    background-color: #55679C;
+
+
+}
+
+/* .applyImg{
+    border: 10px solid black;
+} */
+.bgImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+.selectedImg{
+    border: 10px solid black;
+}
+.image-list-selected{
+    outline: 2px solid black;
+}
+.card-body{
+    background-repeat: no-repeat !important;
+    background-size:cover !important;
 }

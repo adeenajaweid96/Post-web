@@ -1,16 +1,18 @@
+var background = "";
+
 function submitPost(){
     let title = document.getElementById("postTitle");
-    let descrip = document.getElementById("postDescript");
+    let descrip = document.getElementById("postDescript");  
     let postList = document.getElementById('post');
 
     
 
-    if(title.value && descrip.value){
+    if(title.value.trim() && descrip.value.trim()){
     postList.innerHTML += `   <div class="card ">
                         <div class="card-header fontStyle">
                             Your Posts
                         </div>
-                        <div class="card-body ">
+                        <div class="card-body" style="background-image:url(${background});">
                             <h5 class="card-title fontStyle" id="previousTitle">${title.value}</h5>
                             <p class="card-text fontStyle" id="previousDescrip">${descrip.value}</p>
                         </div>
@@ -59,6 +61,14 @@ function submitPost(){
 
 }
 
+function applyImg(url){
+  background = url;
+  var img = document.getElementsByClassName("bgImg");
+  for(var i=0;i < img.length;i++){
+    img[i].className='bgImg';
+  }
+  event.target.className += 'image-list-selected';
+}
 async function editBtn(event){
 
 let previousTitle = document.getElementById("previousTitle");
@@ -97,17 +107,7 @@ let previousDescrip = document.getElementById("previousDescrip");
         previousTitle.innerHTML = formValues[0];
         previousDescrip.innerHTML = formValues[1];
 },1500)
-
-    // if (formValues) {
-    //   Swal.fire(JSON.stringify(formValues));
-    // }
 }
-
-
-
-
-
-
 function removeBtn(event){
     Swal.fire({
 		title: 'Are You sure! You want to delete this post',
